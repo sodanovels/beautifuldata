@@ -1,0 +1,74 @@
+/* -------------------------------------------------- */
+
+/* !layout blocks */
+
+/* -------------------------------------------------- */
+
+.wrapper {
+	@extend %wrapper;
+	@include clearfix;
+	text-align: left;
+	padding: $spacer/2;
+	@include breakpoint($phablet) {
+		padding: $spacer;
+	}
+}
+.row {
+	@include breakpoint($phablet) {
+		@include row();
+		margin-bottom: $spacer;
+		> [class*="col"] {
+			@include column (6);
+		}
+	}
+}
+[role], footer {
+	@include clearfix;
+}
+.hero {
+	@include background-image(linear-gradient(tint($black, 5%), $black));
+	position: relative;
+	height: 100vh;
+	border-bottom: 1px solid tint($black,8%);
+	.slides {
+		position: relative;
+		.pane {
+			position: relative;
+			z-index: 2;
+			height: 100vh;
+		}
+		
+	}
+	@include vert-centre(100vh);
+
+}
+.logo {
+	position: fixed;
+	z-index: 999;
+	top: 20px;
+	left: 20px;
+	width: 80px;
+}
+.intro { 
+	@include animation(fadeIn);
+	position: relative;
+	z-index: 2;
+	width: auto;
+	max-width: 580px;
+	margin: 0 auto;
+}
+video {
+	position: relative;
+	
+}
+.bg {
+	background-position: 50% 50%;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

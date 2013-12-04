@@ -1,0 +1,9 @@
+.button {
+	text-transform: uppercase;
+	padding: $spacer/4 0;
+	color: $primary;
+	font-family: "DIN Next W01 Black", "Helvetica", Arial, sans-serif;
+	[class*="icon"] {
+		display: block;
+	}
+}

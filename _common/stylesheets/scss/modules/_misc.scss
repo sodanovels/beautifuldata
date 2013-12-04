@@ -1,0 +1,60 @@
+/* --------------------------------------------------
+
+	VIDEO
+	http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+	
+-------------------------------------------------- */
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+.flex-video {
+	position: relative;
+	//padding-top: 25px;
+	padding-bottom: 67.5%;
+	height: 0;
+	margin-bottom: 16px;
+	overflow: hidden;
+}
+.flex-video.widescreen { padding-bottom: 57.25%; }
+.flex-video.vimeo { padding-top: 0; }
+.flex-video iframe,
+.flex-video object,
+.flex-video embed {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* --------------------------------------------------
+
+	PARALLAX
+	
+-------------------------------------------------- */
+html.no-touch{
+	.para {
+	position: static !important;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	//background-attachment: fixed !important;
+	background-color: none;
+	height: 100%;
+	
+	
+	}
+}
+
+.cover {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(#000, 0.6);
+}

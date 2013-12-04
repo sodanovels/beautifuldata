@@ -1,0 +1,51 @@
+/* --------------------------------------------------
+
+	FUNCTION PARTIALS
+	
+-------------------------------------------------- */
+%wrapper {
+	position: relative;
+	width: 100%;
+	max-width: $max-width;	
+	margin: 0 auto;
+}
+%panel {
+	position: relative;
+	background-position: 50% 50%;
+	background-size: cover;
+	width: 100%;
+	margin-bottom: 1.5em;		
+	overflow: hidden;
+	padding: $spacer/2;
+	@include intrinsic-ratio(1);
+}
+
+%links-macro {
+	position: relative;
+	@include adjust-font-size-to(ms(-1, $base-font-size));
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $primary;
+	padding: $spacer/4;
+	height: $spacer;
+	display: block;
+	overflow: hidden;
+	span[class*="icon"] {
+		font-size: large;
+	}
+}
+@mixin vert-centre($height) {
+	position: relative;
+	.container {
+		display: table;
+		height: $height;
+		width: 100%;
+		text-align: center;
+		
+		> div {
+			display: table-cell;
+			vertical-align: middle;
+			padding: $spacer/2;
+		}
+	}
+}
